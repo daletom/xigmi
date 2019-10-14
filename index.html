@@ -153,18 +153,7 @@
 <script type="text/javascript" src="https://tom.imgix.net/imgix.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
 <script>
-      new Luminous(document.querySelector(".simple-demo"));
-      new LuminousGallery(
-        document.querySelectorAll(".gallery-demo"),
-        {
-          arrowNavigation: true
-        },
-        {
-          caption: function(trigger) {
-            return trigger.querySelector("img").getAttribute("alt");
-          }
-        }
-      );
+      new Luminous(document.querySelector("a"));
 </script>
 
 </html>
