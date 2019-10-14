@@ -96,7 +96,7 @@
 		<a href="https://www.xigmi.com/">Video</a>
 	</div>
 	<main>
-		<a class="gallery-demo" href="https://tom.imgix.net/artsy/1.jpg?auto=format,compress&w=1800"><img ix-src="https://tom.imgix.net/artsy/1.jpg?auto=format,compress&fit=fill&fill=blur&ar=1:1" class="lazyload"
+		<a class="simple-demo" href="https://tom.imgix.net/artsy/1.jpg?auto=format,compress&w=1800"><img ix-src="https://tom.imgix.net/artsy/1.jpg?auto=format,compress&fit=fill&fill=blur&ar=1:1" class="lazyload"
 			sizes="(min-width: 1240px) 25vw, 90vw">
 		</a>
 		<img ix-src="https://tom.imgix.net/artsy/2.jpg?auto=format,compress&fit=fill&fill=blur&ar=1:1" class="lazyload"
@@ -153,7 +153,19 @@
 <script type="text/javascript" src="https://tom.imgix.net/imgix.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
 <script>
-      new Luminous(document.querySelector("a"));
+      new Luminous(document.querySelector(".simple-demo"));
+      new LuminousGallery(
+        document.querySelectorAll(".gallery-demo"),
+        {
+          arrowNavigation: true
+        },
+        {
+          caption: function(trigger) {
+            return trigger.querySelector("img").getAttribute("alt");
+          }
+        }
+      );
+    
 </script>
 
 </html>
