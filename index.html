@@ -7,7 +7,6 @@
 	<meta property="ix:sizesAttribute" content="data-sizes">
 	<title>XIgmi</title>
 	<link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="https://tom.imgix.net/luminous_basic.css">
 	<style>
 		* {
 			box-sizing: border-box;
@@ -97,14 +96,14 @@
 		<a href="https://www.xigmi.com/">Video</a>
 	</div>
 	<main>
-		<a class="gallery-demo" href="https://tom.imgix.net/artsy/1.jpg?auto=format,compress&w=1800"><img ix-src="https://tom.imgix.net/artsy/1.jpg?auto=format,compress&fit=crop&crop=faces,entropy&ar=1:1" class="lazyload"
+		<a href="https://tom.imgix.net/artsy/1.jpg?auto=format,compress&w=1800"><img ix-src="https://tom.imgix.net/artsy/1.jpg?auto=format,compress&fit=crop&crop=faces,entropy&ar=1:1" class="lazyload"
 			sizes="(min-width: 1240px) 25vw, 90vw">
 		</a>
-		<a class="gallery-demo" href="https://tom.imgix.net/artsy/2.jpg?auto=format,compress&w=1800">
+		<a href="https://tom.imgix.net/artsy/2.jpg?auto=format,compress&w=1800">
 		<img ix-src="https://tom.imgix.net/artsy/2.jpg?auto=format,compress&fit=crop&crop=faces,entropy&ar=1:1" class="lazyload"
 			sizes="(min-width: 1240px) 25vw, 90vw">
 		</a>
-		<a class="gallery-demo" href="https://tom.imgix.net/artsy/3.jpg?auto=format,compress&w=1800">
+		<a href="https://tom.imgix.net/artsy/3.jpg?auto=format,compress&w=1800">
 		<img ix-src="https://tom.imgix.net/artsy/3.jpg?auto=format,compress&fit=crop&crop=faces,entropy&ar=1:1" class="lazyload"
 			sizes="(min-width: 1240px) 25vw, 90vw">
 		</a>
@@ -157,21 +156,5 @@
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/lazysizes.min.js"></script>
 <script type="text/javascript" src="https://tom.imgix.net/imgix.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
-<script>
-      new Luminous(document.querySelector(".simple-demo"));
-      new LuminousGallery(
-        document.querySelectorAll(".gallery-demo"),
-        {
-          arrowNavigation: true
-        },
-        {
-          caption: function(trigger) {
-            return trigger.querySelector("img").getAttribute("alt");
-          }
-        }
-      );
-    
-</script>
 
 </html>
