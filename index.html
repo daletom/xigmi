@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>XIgmi</title>
-	<link>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<style>
 		* {
 			box-sizing: border-box;
@@ -85,13 +85,27 @@
 </head>
 
 <body>
-	<div class="topnav">
-		<a href="https://www.xigmi.com" class="active">Home</a>
-		<a href="https://variablequality.xigmi.com">Variable Q</a>
-		<a href="https://s3.xigmi.com">S3 Bucket</a>
-		<a href="https://gatsbyimagetest.netlify.com/"> Gatsby image</a>
-		<a href="https://gatsbyimagetest.netlify.com/page-2"> ix React</a>
-	</div>
+	<nav>
+		<div class="navWide">
+    		<div class="wideDiv">
+				<a href="https://www.xigmi.com">Home</a>
+				<a href="https://variablequality.xigmi.com">Variable Q</a>
+				<a href="https://s3.xigmi.com">S3 Bucket</a>
+				<a href="https://gatsbyimagetest.netlify.com/"> Gatsby image</a>
+				<a href="https://gatsbyimagetest.netlify.com/page-2"> ix React</a>
+			</div>
+		</div>
+		<div class="navNarrow">
+    		<i class="fa fa-bars fa-2x"></i>
+    		<div class="narrowLinks hidden">
+				<a href="https://www.xigmi.com">Home</a>
+				<a href="https://variablequality.xigmi.com">Variable Q</a>
+				<a href="https://s3.xigmi.com">S3 Bucket</a>
+				<a href="https://gatsbyimagetest.netlify.com/"> Gatsby image</a>
+				<a href="https://gatsbyimagetest.netlify.com/page-2"> ix React</a>
+			</div>
+		</div>
+	</nav>
 	<main>
 		<img ix-src="https://tom.imgix.net/artsy/1.jpg?auto=format&fit=crop&crop=faces,entropy&ar=1:1" 
 			sizes="(min-width: 1240px) 30vw, 90vw">
@@ -147,5 +161,14 @@
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/lazysizes.min.js"></script>
 <script type="text/javascript" src="https://tom.imgix.net/imgix.js"></script>
+<script type="text/javascript">
+	let navLinks = document.querySelector('.navNarrow');
+let narrowLinks = document.querySelector('.narrowLinks');
 
+navLinks.addEventListener('click', toggle);
+
+function toggle() {
+	narrowLinks.classList.toggle('hidden');
+};
+</script>
 </html>
